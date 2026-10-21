@@ -2,6 +2,7 @@
 // como data-cy durante a execução para manter os testes usando um único padrão
 // de seletor sem alterar o site externo. O evento cobre também navegações e
 // recarregamentos do aplicativo dentro de cada teste.
+import './commands';
 Cypress.on('window:before:load', (win) => {
   const espelharAtributos = (raiz) => {
     if (raiz.nodeType !== win.Node.ELEMENT_NODE) return;
